@@ -1,0 +1,22 @@
+syntax = "proto2";
+
+package Peer2PeerNetwork;
+
+service Server{
+  rpc send_a_chat_event (DoChatEvent) returns (EmptyReply) {}
+}
+
+message DoChatEvent{
+  required string recipient = 1;
+  required string sender_uuid = 2;
+  required string sender_name = 3;
+  required string chat_text = 4;
+  required int32 round = 5;
+  required string time = 6;
+  required string event_type = 7;
+  optional bool network = 8 [default = false];
+}
+
+message EmptyReply{
+  required string response = 1;
+}

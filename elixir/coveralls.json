@@ -1,0 +1,7 @@
+{
+  "skip_files": [
+    "lib/peer2_peer_network/interfaces",
+    "lib/peer2_peer_network/exceptions",
+    "lib/proto"
+  ]
+}
